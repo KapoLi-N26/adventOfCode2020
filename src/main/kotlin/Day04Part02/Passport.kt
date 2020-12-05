@@ -12,10 +12,10 @@ data class Passport(val fields: Map<String, String>) {
             "hgt" to {i: String ->
                 when {
                     i.endsWith("cm") -> {
-                        i.substring(0, i.indexOf("cm")).toInt() in 150..193
+                        i.substringBefore("cm").toInt() in 150..193
                     }
                     i.endsWith("in") -> {
-                        i.substring(0, i.indexOf("in")).toInt() in 59..76
+                        i.substringBefore("in").toInt() in 59..76
                     }
                     else -> {
                         false
