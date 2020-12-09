@@ -1,6 +1,5 @@
 package Day01Part01
 import utils.getResourceText
-import java.io.File
 
 fun main(args: Array<String>) {
     val seen = mutableSetOf<Int>()
